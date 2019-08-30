@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LOVE_XL</title>
+
+<style type="text/css">
+@font-face {
+  font-family: digit;
+  src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<div style="text-align:center;clear:both;">
+</div>
+<div id="mainDiv">
+  <div id="content">
+    <div id="code">
+      <span class="comments">LOVE_XL</span><br />
+      <span class="space"/><span class="comments">⭐2019—07-20⭐</span><br />
+      <span class="space"/><span class="comments">⭐2017-07-28⭐</span><br />
+      <span class="space"/><span class="comments"></span><br />
+      男孩 = <span class="keyword">161 </span>  <br />
+      女孩 = <span class="keyword">铁锤 </span> <br /><br />
+      <span >2019年7月20号,下午1点30； </span><br />
+      <span class="comments">是我们第一次相遇； </span><br />
+      我记住了你的大眼睛;<br />
+      <span class="comments">记住了你男孩般爽朗的性格;</span><br />
+      记住你甜人的微笑;<br />
+      <span class="comments">我们相互认识了解的时间并不久;</span><br />
+      但却被你深深吸引着,无法自拔;<br />
+      <span class="comments">我们认识的这一个月的时间里;</span><br />
+      已经让我在你的世界里迷失了自我;<br />
+      <span class="comments">每天满脑子都是你,你的一言一行,决定着我的心情;</span><br />
+      时而开心的像个傻子,时而伤心的像块碎玻璃;<br />
+      <span class="comments">像中了毒一样的爱上了你.</span><br />
+      <br />
+      我想说:<br />
+      铁锤,不管我们会不会在一起,都祝愿你幸福快乐;<br />
+      
+        <!--<span class="comments">A</span><br />
+      <span class="comments">B</span><br />
+      <span class="keyword">C</span> D <span class="keyword">E</span>;<br />
+      <span class="keyword">F</span> G <span class="keyword">H</span>;<br />
+      <span class="placeholder"/><span class="comments">I</span><br />
+      <span class="placeholder"/><span class="comments">J</span><br />
+      <span class="placeholder"/>K<br />
+      <span class="comments">L</span><br />
+      <br>
+      <br>-->
+    </div>
+    <div id="loveHeart">
+      <canvas id="garden"></canvas>
+      <div id="words">
+        <div id="messages">
+          阳阳，这是我们相识在一起的时光。
+          <div id="elapseClock"></div>
+        </div>
+        <div id="loveu">
+          我会记着直到永永远远。<br/>
+          <div class="signature">- 爱你的小傻子</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2019, 7, 20);
+together.setHours(13);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+  var msg = document.createElement("div");
+  msg.id = "errorMsg";
+  msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+  document.body.appendChild(msg);
+  $("#code").css("display", "none")
+  $("#copyright").css("position", "absolute");
+  $("#copyright").css("bottom", "10px");
+  document.execCommand("stop");
+} else {
+  setTimeout(function () {
+    startHeartAnimation();
+  }, 5000);
+
+  timeElapse(together);
+  setInterval(function () {
+    timeElapse(together);
+  }, 500);
+
+  adjustCodePosition();
+  $("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
